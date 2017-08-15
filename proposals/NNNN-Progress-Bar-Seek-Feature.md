@@ -6,8 +6,7 @@
 
 ## Introduction
 
-The Seek feature is a new feature that is meant to utilize the progress bar for media apps. Giving the user the ability to use the progress bar to seek allows users to freely move throughout a song or podcast with ease.  
-
+The Seek feature is a proposed new feature that is meant to enhance the usage of the progress bar for media apps with seek capability. Giving the user the ability to use the progress bar to seek will allow users to freely move throughout a song or podcast with ease.
 
 ## Motivation
 
@@ -24,24 +23,10 @@ SetMediaClockTimer is a RPC that SDL already has. If the app would like to use t
 
 There will be a new notification called OnSeekMediaClockTimer, which gives the app an updated startTime. For example, a notification would be sent to the app when the user selects the cursor on the head unit’s progress bar, drags it somewhere else in the track, and releases it. The notification contains the new track time position in hours, minutes and seconds.
 
-
- 
- 
-## Potential downsides
-
-* Not having the space or capability to have different scrub speeds. \(Scrubbing is the motion of dragging the button across the progress bar\)
-
-* If an app has ads that they don’t want the user to skip through, they would have to turn the seek progress bar feature off.
-
-## Impact on existing code
-
-
-# Current Implementation:
+### Current Implementation:
 
 Example: Progress Bar without Seek feature
-
-![pasted image at 2017_06_08 11_01 am](https://media.github.ford.com/user/3265/files/a38d3982-50f2-11e7-9b82-9d31b972bf98)
-
+![Current](https://github.com/dportis/sdl_evolution/blob/Feature/progress-bar-seek/assets/proposals/NNNN-Progress-Bar-Seek-Feature/Current.png)
 
 ```
   <function name="SetMediaClockTimer" functionID="SetMediaClockTimerID" messagetype="request">
@@ -60,11 +45,10 @@ Example: Progress Bar without Seek feature
 ```
 
 
-# Proposed Implementation:
+### Proposed Implementation:
 
 Example: Progress Bar with Seek feature
-
-![pasted image at 2017_06_08 10_57 am](https://media.github.ford.com/user/3265/files/b7f0b016-50f2-11e7-86b2-d4d13499dc9c)
+![Proposed](https://github.com/dportis/sdl_evolution/blob/Feature/progress-bar-seek/assets/proposals/NNNN-Progress-Bar-Seek-Feature/Proposed.png)
 
 There is a new parameter for SetMediaClockTimer in the Mobile and HMI APIs that allows the Seek feature to exist.   
 
@@ -99,6 +83,19 @@ There is a new notification named OnSeekMediaClockTimer in the HMI API that will
         </param>
     </function>
 ```
+
+ 
+ 
+## Potential downsides
+
+* Not having the space or capability to have different scrub speeds. \(Scrubbing is the motion of dragging the button across the progress bar\)
+
+* If an app has ads that they don’t want the user to skip through, they would have to turn the seek progress bar feature off.
+
+## Impact on existing code
+
+Mobile API's, HMI API's and SDL Core all need to be updated to accommodate the new parameters proposed.
+
 
 
 
