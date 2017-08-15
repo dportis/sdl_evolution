@@ -26,6 +26,7 @@ There will be a new notification called OnSeekMediaClockTimer, which gives the a
 ### Current Implementation:
 
 Example: Progress Bar without Seek feature
+
 ![Current](https://github.com/dportis/sdl_evolution/blob/Feature/progress-bar-seek/assets/proposals/NNNN-Progress-Bar-Seek-Feature/Current.png)
 
 ```
@@ -48,6 +49,7 @@ Example: Progress Bar without Seek feature
 ### Proposed Implementation:
 
 Example: Progress Bar with Seek feature
+
 ![Proposed](https://github.com/dportis/sdl_evolution/blob/Feature/progress-bar-seek/assets/proposals/NNNN-Progress-Bar-Seek-Feature/Proposed.png)
 
 There is a new parameter for SetMediaClockTimer in the Mobile and HMI APIs that allows the Seek feature to exist.   
@@ -94,11 +96,7 @@ There is a new notification named OnSeekMediaClockTimer in the HMI API that will
 
 ## Impact on existing code
 
-Mobile API's, HMI API's and SDL Core all need to be updated to accommodate the new parameters proposed.
-
-
-
-
+* Mobile API's, HMI API's and SDL Core all need to be updated to accommodate the new parameters proposed.
 
 
 ## Alternatives considered
